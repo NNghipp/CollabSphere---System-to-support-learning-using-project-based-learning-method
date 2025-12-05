@@ -1,0 +1,31 @@
+﻿collabsphere/
+├── app/                                # Next.js App Router
+│   ├── (auth)/                         # Nhóm route xác thực
+│   │   ├── sign-in/                    # Trang đăng nhập
+│   │   ├── sign-up/                    # Trang đăng ký
+│   │   └── layout.tsx                  # Layout cho Auth
+│   ├── (root)/                         # Nhóm route chính
+│   │   ├── admin/                      # Khu vực Admin
+│   │   ├── workspace/[teamId]/         # Khu vực làm việc nhóm
+│   │   │   ├── board/                  # Kanban Board
+│   │   │   ├── meeting/                # Video Call
+│   │   │   └── page.tsx                # Dashboard nhóm
+│   │   └── page.tsx                    # Landing page
+│   ├── api/                            # API Routes (Upload, AI, Socket)
+│   ├── globals.css                     # Global styles
+│   └── layout.tsx                      # Root Layout
+├── components/                         # UI Components
+│   ├── ui/                             # Các nút, input cơ bản
+│   ├── features/                       # Components theo chức năng
+│   │   ├── whiteboard/                 # Bảng vẽ
+│   │   └── meeting/                    # Video call UI
+│   └── shared/                         # Sidebar, Navbar
+├── lib/                                # Xử lý Logic & Backend
+│   ├── actions/                        # Server Actions (Gọi DB)
+│   ├── models/                         # Database Models
+│   └── utils.ts                        # Hàm tiện ích
+├── hooks/                              # Custom React Hooks
+├── public/                             # Hình ảnh, icons
+├── .env                                # Biến môi trường
+├── middleware.ts                       # Bảo mật routes
+└── package.json
