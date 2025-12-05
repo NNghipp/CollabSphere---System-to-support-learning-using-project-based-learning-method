@@ -6,73 +6,55 @@ we propose CollabSphere — a system designed to support project management and 
 KEY FEATURES
 🎓 Academic & Project Governance
 
-Syllabus Management – Staff imports files to automatically create and organize subjects and syllabuses.
+- Syllabus Management – Staff imports files to automatically create and organize subjects and syllabuses.
 
+- Project Approval Workflow – Lecturers submit projects; Head Departments review, approve, or deny them before assignment.
 
-Project Approval Workflow – Lecturers submit projects; Head Departments review, approve, or deny them before assignment.
+- Class Organization – Automated class creation and member assignment (Lecturers/Students) via file import.
 
-
-Class Organization – Automated class creation and member assignment (Lecturers/Students) via file import.
-
-
-
-Milestone Planning – Lecturers define project objectives and milestones based on the subject syllabus.
+- Milestone Planning – Lecturers define project objectives and milestones based on the subject syllabus.
 
 
 🚀 Team Workspace & Execution
 
-Agile Task Board – Create sprints, manage cards, tasks, and subtasks within a unified team workspace.
+- Agile Task Board – Create sprints, manage cards, tasks, and subtasks within a unified team workspace.
 
+- Checkpoint System – Leaders create checkpoints; members submit entries and mark completion to track progress.
 
+- Resource Hub – Centralized management for sharing files, docs, and slides between lecturers and teams.
 
-Checkpoint System – Leaders create checkpoints; members submit entries and mark completion to track progress.
-
-
-Resource Hub – Centralized management for sharing files, docs, and slides between lecturers and teams.
-
-
-Contribution Tracking – Monitor real-time progress and percentage of contribution for every team member.
+- Contribution Tracking – Monitor real-time progress and percentage of contribution for every team member.
 
 
 🎨 Real-time Collaboration
 
-Interactive Whiteboard – Multi-user drawing and brainstorming tool with instant synchronization.
+- Interactive Whiteboard – Multi-user drawing and brainstorming tool with instant synchronization.
 
+- Live Doc Editor – Collaborative text editor for writing reports and documents simultaneously.
 
+- Video Meetings – High-quality video/audio calls with screen sharing and flexible join options.
 
-Live Doc Editor – Collaborative text editor for writing reports and documents simultaneously.
+- Persistent Chat – Real-time messaging system for both in-meeting and out-of-meeting team communication.
 
-
-Video Meetings – High-quality video/audio calls with screen sharing and flexible join options.
-
-
-
-Persistent Chat – Real-time messaging system for both in-meeting and out-of-meeting team communication.
 
 📊 Evaluation & Assessment
 
-Performance Grading – Lecturers evaluate and give feedback on team checkpoints and final project outcomes.
+- Performance Grading – Lecturers evaluate and give feedback on team checkpoints and final project outcomes.
 
+- Peer Review System – Team members evaluate and provide feedback on each other’s contributions and answers.
 
-
-Peer Review System – Team members evaluate and provide feedback on each other’s contributions and answers.
-
-
-Milestone Q&A – Lecturers create questions; students answer and receive specific feedback.
+- Milestone Q&A – Lecturers create questions; students answer and receive specific feedback.
 
 
 🤖 AI-Powered Assistance
 
-Smart Planning – AI generates project goals, timelines, and milestones based on syllabus data.
+- Smart Planning – AI generates project goals, timelines, and milestones based on syllabus data.
 
-
-
-Intelligent Advisor – AI chatbot assists with idea brainstorming, solution suggestions, and progress analysis.
+- Intelligent Advisor – AI chatbot assists with idea brainstorming, solution suggestions, and progress analysis.
 
 
 🔔 Notifications
 
-Real-time Alerts – Instant updates for new resources, message receipts, and completed milestones.
-
-
-Email Integration – Automated emails for system reports, team assignments, and evaluation results.
+- Real-time Alerts – Instant updates for new resources, message receipts, and completed milestones.
+  
+- Email Integration – Automated emails for system reports, team assignments, and evaluation results.
