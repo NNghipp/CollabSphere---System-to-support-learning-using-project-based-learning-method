@@ -62,87 +62,36 @@ KEY FEATURES
 
 
   📁 Project Structure
-collabsphere/
-├── app/                                # Next.js App Router (Routing chính)
-│   ├── (auth)/                         # Nhóm route xác thực (Login, Register)
-│   │   ├── sign-in/[[...sign-in]]/     # Trang đăng nhập
-│   │   ├── sign-up/[[...sign-up]]/     # Trang đăng ký
-│   │   └── layout.tsx                  # Layout riêng cho Auth (không có sidebar)
-│   │
-│   ├── (root)/                         # Nhóm route chính (Đã đăng nhập)
-│   │   ├── page.tsx                    # Landing page / Dashboard tổng
-│   │   ├── admin/                      # Khu vực Admin (Quản lý User, System)
-│   │   ├── staff/                      # Khu vực Staff (Import data, xếp lớp)
-│   │   ├── projects/                   # Danh sách & Quản lý đề tài (Lecturer/Head)
-│   │   ├── classes/                    # Danh sách lớp học
-│   │   │
-│   │   ├── workspace/[teamId]/         # KHÔNG GIAN LÀM VIỆC NHÓM (Core Feature)
-│   │   │   ├── page.tsx                # Dashboard nhóm
-│   │   │   ├── board/                  # Kanban Board (Quản lý Task)
-│   │   │   ├── whiteboard/             # Vẽ Real-time (Socket.IO)
-│   │   │   ├── meeting/                # Video Call (WebRTC/Jitsi)
-│   │   │   └── settings/               # Cài đặt nhóm
-│   │   │
-│   │   └── layout.tsx                  # Layout chính (Sidebar, Header, Socket Provider)
-│   │
-│   ├── api/                            # API Routes (Webhooks, upload, proxy)
-│   │   ├── upload/                     # Route xử lý upload file (Cloudinary/S3)
-│   │   ├── socket/                     # Route khởi tạo Socket.IO (nếu dùng chung server)
-│   │   └── ai/                         # Route gọi AWS Bedrock/OpenAI
-│   │
-│   ├── globals.css                     # Global styles (Tailwind directives)
+
+
+  collabsphere/
+├── app/                                # Next.js App Router
+│   ├── (auth)/                         # Nhóm route xác thực
+│   │   ├── sign-in/                    # Trang đăng nhập
+│   │   ├── sign-up/                    # Trang đăng ký
+│   │   └── layout.tsx                  # Layout cho Auth
+│   ├── (root)/                         # Nhóm route chính
+│   │   ├── admin/                      # Khu vực Admin
+│   │   ├── workspace/[teamId]/         # Khu vực làm việc nhóm
+│   │   │   ├── board/                  # Kanban Board
+│   │   │   ├── meeting/                # Video Call
+│   │   │   └── page.tsx                # Dashboard nhóm
+│   │   └── page.tsx                    # Landing page
+│   ├── api/                            # API Routes (Upload, AI, Socket)
+│   ├── globals.css                     # Global styles
 │   └── layout.tsx                      # Root Layout
-│
-├── components/                         # Reusable UI components
-│   ├── ui/                             # Shadcn UI / Base components (Button, Input...)
-│   ├── shared/                         # Components dùng chung (Navbar, Sidebar, Loader)
-│   ├── forms/                          # Các form phức tạp (CreateProject, SubmitTask)
-│   │
-│   ├── features/                       # MODULE HÓA CÁC CHỨC NĂNG LỚN (Quan trọng)
-│   │   ├── workspace/                  # TaskCard, Column, FilterBar
-│   │   ├── whiteboard/                 # Canvas, Toolbar, CursorOverlay
-│   │   ├── meeting/                    # VideoGrid, ControlBar, ChatBox
-│   │   ├── chat/                       # ChatBubble, MessageInput
-│   │   └── evaluation/                 # RubricForm, PeerReviewModal
-│   │
-│   └── providers/                      # Context Providers
-│       ├── theme-provider.tsx
-│       ├── socket-provider.tsx         # Quản lý kết nối Real-time
-│       └── modal-provider.tsx          # Quản lý các popup
-│
-├── lib/                                # Server-side utilities & Logic
-│   ├── actions/                        # SERVER ACTIONS (Thay thế API controllers)
-│   │   ├── auth.actions.ts             # Login logic
-│   │   ├── user.actions.ts             # CRUD User
-│   │   ├── project.actions.ts          # Tạo/Duyệt đề tài
-│   │   ├── workspace.actions.ts        # Drag-drop task, update status
-│   │   ├── ai.actions.ts               # Logic gọi AI gợi ý
-│   │   └── stream.actions.ts           # Token cho Video Call
-│   │
-│   ├── database/                       # Kết nối Database (nếu code full Next.js)
-│   │   ├── models/                     # Mongoose Models / Prisma Schema
-│   │   └── mongoose.ts                 # DB connection
-│   │
-│   ├── validations/                    # Zod Schemas (Validate dữ liệu đầu vào)
-│   │   ├── project.validation.ts
-│   │   └── task.validation.ts
-│   │
-│   └── utils.ts                        # Helper functions (cn, formatDate...)
-│
-├── hooks/                              # Custom React hooks
-│   ├── use-socket.ts                   # Hook lắng nghe sự kiện socket
-│   ├── use-draw.ts                     # Logic vẽ bảng trắng
-│   ├── use-webrtc.ts                   # Logic xử lý MediaStream
-│   └── use-debounce.ts                 # Tối ưu performance search
-│
-├── types/                              # TypeScript definitions
-│   ├── index.d.ts                      # Global types
-│   └── socket.d.ts                     # Type cho sự kiện Socket
-│
-├── public/                             # Static assets
-│   ├── images/
-│   └── icons/
-│
-├── middleware.ts                       # Xử lý Protected Routes (Chặn chưa login)
-├── next.config.js
-└── tailwind.config.ts
+├── components/                         # UI Components
+│   ├── ui/                             # Các nút, input cơ bản
+│   ├── features/                       # Components theo chức năng
+│   │   ├── whiteboard/                 # Bảng vẽ
+│   │   └── meeting/                    # Video call UI
+│   └── shared/                         # Sidebar, Navbar
+├── lib/                                # Xử lý Logic & Backend
+│   ├── actions/                        # Server Actions (Gọi DB)
+│   ├── models/                         # Database Models
+│   └── utils.ts                        # Hàm tiện ích
+├── hooks/                              # Custom React Hooks
+├── public/                             # Hình ảnh, icons
+├── .env                                # Biến môi trường
+├── middleware.ts                       # Bảo mật routes
+└── package.json
