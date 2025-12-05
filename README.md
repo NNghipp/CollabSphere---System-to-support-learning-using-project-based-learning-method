@@ -4,6 +4,7 @@ we propose CollabSphere — a system designed to support project management and 
 
 
 KEY FEATURES
+
 🎓 Academic & Project Governance
 
 - Syllabus Management – Staff imports files to automatically create and organize subjects and syllabuses.
